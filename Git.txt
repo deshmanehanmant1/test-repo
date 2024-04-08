@@ -1,0 +1,37 @@
+POST https://dev.azure.com/{organization}/{project}/_apis/git/repositories?api-version=4.1
+
+
+curl -H "Authorization: token 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" --data '{"name":"test01"}' https://api.github.com/user/repos
+
+
+https://api.github.com/user/deshmanehanmant1/repos?access_token=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
+
+
+gh repo create --private my-project
+------------------------------------------------------------
+
+PUT /repos/{owner}/{repo}/contents/{path}
+
+{
+  "message": "commit message",
+  "content": "base64 encoded content of the file",
+  "branch": "branch name",
+  "committer": {
+    "name": "Your Name",
+    "email": "your@email.com"
+  }
+}
+
+
+PUT /repos/octocat/Hello-World/contents/path/to/file.txt
+
+
+{
+  "message": "Update file.txt",
+  "content": "SGVsbG8sIFdvcmxkIQ==",  // base64 encoded content of "Hello, World!"
+  "branch": "main",
+  "committer": {
+    "name": "John Doe",
+    "email": "john.doe@example.com"
+  }
+}
